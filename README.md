@@ -41,5 +41,5 @@ curl -X POST -F "file=@example/file.csv" http://localhost:3000/api/inventory
 
 
 ```bash
-ricardo albrecht - [EMAIL_ADDRESS]
+ricardo albrecht - ricardoalbrecht1@gmail.com
 ```
