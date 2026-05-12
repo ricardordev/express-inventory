@@ -13,6 +13,10 @@ PORT=
 
 # Qty to trigger alerts
 LOW_STOCK_THRESHOLD=
+
+# Rate Limit (requests x seconds)
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_SECONDS=60
 ```
 
 ## Running
