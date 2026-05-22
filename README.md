@@ -12,16 +12,16 @@ A minimal reference implementation of a REST API built with **Express.js** for C
 Create a `.env` file in the root directory and populate it with the following variables:
 
 ```env
-# Core Database
+# Database connection
 DATABASE_URL=
 
 # API Default Port
-PORT=
+PORT=3000
 
-# Stock Monitoring
+# Qty to trigger alerts
 LOW_STOCK_THRESHOLD=
 
-# Rate Limit
+# Rate Limit (requests x seconds)
 RATE_LIMIT_REQUESTS=100
 RATE_LIMIT_SECONDS=60
 ```
