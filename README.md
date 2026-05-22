@@ -1,47 +1,61 @@
-## Getting Started
+# Inventory API & Express.js
 
-It's just an example of how to use **express.js** to create simple API to accept csv file, process it to store in database and return reports like current stock, low stock alerts and anomalies. It uses **Multer** as middleware for file upload and **PostgreSQL** as database. To check it, run the development server:
+A minimal reference implementation of a REST API built with **Express.js** for CSV-based inventory management, featuring file upload handling, PostgreSQL persistence, and automated stock monitoring with low-stock alerts and anomaly detection.
+
+---
 
 ## Environment Variables
 
-```bash
-# Database connection
+Create a `.env` file in the root directory and populate it with the following variables:
+
+```env
+# Core Database
 DATABASE_URL=
 
 # API Default Port
 PORT=
 
-# Qty to trigger alerts
+# Stock Monitoring
 LOW_STOCK_THRESHOLD=
 
-# Rate Limit (requests x seconds)
+# Rate Limit
 RATE_LIMIT_REQUESTS=100
 RATE_LIMIT_SECONDS=60
 ```
 
-## Running
+---
+
+## Getting Started
+
+Clone the repository, install the dependencies, and fire up the local development server using your preferred package manager:
 
 ```bash
+# Install dependencies
+npm install # or yarn, pnpm, bun
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-## Endpoint
+---
 
-```bash
-http://localhost:3000/api/inventory
-```
+## Usage
 
-## Usage Example
+Send a CSV file to the inventory endpoint using a `multipart/form-data` POST request:
 
 ```bash
 curl -X POST -F "file=@example/file.csv" http://localhost:3000/api/inventory
 ```
+
+The API processes the file, stores the data in the database, and returns a report with current stock levels, low-stock alerts, and any detected anomalies.
+
+---
+
+## Deployment & Verification
+
+You can interact with the API through the following execution contexts:
+
+* Localhost: [http://localhost:3000/api/inventory](http://localhost:3000/api/inventory)
 
 
 ```bash
