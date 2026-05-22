@@ -2,6 +2,9 @@
 
 A minimal reference implementation of a REST API built with **Express.js** for CSV-based inventory management, featuring file upload handling, PostgreSQL persistence, and automated stock monitoring with low-stock alerts and anomaly detection.
 
+> [!IMPORTANT]
+> **Disclaimer:** This is reference code. Production implementations require proper security measures.
+
 ---
 
 ## Environment Variables
