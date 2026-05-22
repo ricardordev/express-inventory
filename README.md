@@ -60,7 +60,6 @@ You can interact with the API through the following execution contexts:
 
 * Localhost: [http://localhost:3000/api/inventory](http://localhost:3000/api/inventory)
 
-
 ```bash
 ricardo albrecht - ricardoalbrecht1@gmail.com
 ```
