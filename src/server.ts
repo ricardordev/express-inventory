@@ -5,10 +5,10 @@ import routes from './routes';
 const app = express();
 app.set('trust proxy', 1);
 
-const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
-const RATE_LIMIT_REQUESTS = process.env.RATE_LIMIT_REQUESTS ? parseInt(process.env.RATE_LIMIT_REQUESTS) : 100;
-const RATE_LIMIT_SECONDS = process.env.RATE_LIMIT_SECONDS ? parseInt(process.env.RATE_LIMIT_SECONDS) : 60;
+const RATE_LIMIT_REQUESTS = Number(process.env.RATE_LIMIT_REQUESTS) || 100;
+const RATE_LIMIT_SECONDS = Number(process.env.RATE_LIMIT_SECONDS) || 60;
 
 const limiter = rateLimit({
     windowMs: RATE_LIMIT_SECONDS * 1000,
